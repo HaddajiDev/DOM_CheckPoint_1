@@ -1,4 +1,7 @@
 var Like_img = document.getElementsByClassName("like");
+for (let i = 0; i < Like_img.length; i++) {
+        Like_img[i].setAttribute("id", "Not_Liked");        
+}
 
 function like_item(index) {
     if (Like_img[index].id == "Not_Liked") {
@@ -80,8 +83,7 @@ function Get_Values() {
     for (let i = 0; i < remove_btn.length; i++) {
         remove_btn[i].setAttribute("onClick", `remove_parent(${i})`);
     }
-    for (let i = 0; i < Like_img.length; i++) {
-        Like_img[i].setAttribute("id", "Not_Liked");
+    for (let i = 0; i < Like_img.length; i++) {        
         Like_img[i].setAttribute("onClick", `like_item(${i})`);
     }
 }
